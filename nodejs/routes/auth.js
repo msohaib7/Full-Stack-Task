@@ -88,13 +88,6 @@ router.post('/login', async(req,res) => {
     }
 });
 
-// /forgot password 
-// accept email, validate email
-// 1- find user by email  await User.find({email: req.body.email})
-// 2- if not exist retun user not exist in json
-// 3- genrate 16 rnadom text
-// 4- aik link localhost:3000/resetpassword?userid=_id&resettoken={resettoken}
-// 5- user ki amil pa send
 router.post('/me', async(req,res) => {
     try {
         const value = await forgotSchema.validateAsync(req.body);
